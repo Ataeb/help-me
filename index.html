@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang=en>
+  <head>
+    <meta charset="utf-8">
+    <title>hjälp mig</title>
+    <link href="./main.css" rel="stylesheet" type="text/css"
+  </head>
+  <body>
+    <h1>Vad ska vi äta för mat?</h1>
+    <div class="inputsection">
+      <div class=inputs>
+        <input class="textbox" placeholder="maaat??">
+      </div>
+      <a href="#" class="addoption">+</a>
+    </div>
+    <div class="resultsection"></div>
+    <a href="#" class="generate">välj åt mig</a>
+    <img src="https://media.giphy.com/media/eESmXGnrjnfAQ/giphy.gif"  class="picture">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(function() {
+        $('.resultsection').hide()
+
+        var add_option = function (){
+          $('.inputs').append('<input class="textoption"></input>')
+            }
+          $('.addoption').click(add_option)
+      })
+    </script>
+  </body>
+</html>
