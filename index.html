@@ -23,9 +23,25 @@
         $('.resultsection').hide()
 
         var add_option = function (){
-          $('.inputs').append('<input class="textoption"></input>')
+          $('.inputs').append('<input class="textbox"></input>')
             }
           $('.addoption').click(add_option)
+
+          var options = []
+          var submit = function() {
+            $('.inputsection').hide()
+            $('.generate').hide()
+            $('h1').hide()
+            $('img').hide()
+            $('.resultsection').css('display','flex')
+            $('input').each(function(){
+              options.push($(this).val())
+            })
+            var winner = options[Math.floor(Math.random() * options.length)]
+            $('.resultsection').text(winner)
+
+          }
+          $('.generate').click(submit)
       })
     </script>
   </body>
